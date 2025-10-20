@@ -1,0 +1,22 @@
+{
+  "name": "playwright_apitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirQAEn/Playwright_APITest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirQAEn/Playwright_APITest/issues"
+  },
+  "homepage": "https://github.com/VladimirQAEn/Playwright_APITest#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.0"
+  }
+}
