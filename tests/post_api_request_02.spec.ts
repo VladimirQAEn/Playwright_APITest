@@ -1,26 +1,14 @@
 //Load playwright test module
 import { test, expect } from '@playwright/test';
+const bookingAPIRequestBody = require('../test-data/post_requests_body.json');
 
 //Wright test
-test('Create POST API Request using static request body', async ({ request }) => {
+test('Create POST API Request using static JSON file', async ({ request }) => {
   
   //Create post request
   const postApiResponse = await request.post('/booking', {
-    data: 
-    {
-        "firstname": "Testers",
-        "lastname": "Stevie",
-        "totalprice": 235,
-        "depositpaid": false,
-        "bookingdates": 
-        {
-            "checkin": "2019-02-15",
-            "checkout": "2020-01-01"
-        },
-        "additionalneeds": "super bowls"
-    }
-
-  });  
+    data: bookingAPIRequestBody
+  })
 
   //Validate status code
   expect(postApiResponse.ok()).toBeTruthy();
