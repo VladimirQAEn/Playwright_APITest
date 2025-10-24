@@ -1,11 +1,11 @@
 //Load playwright test module
 import { test, expect } from '@playwright/test';
-import {stringFormat} from '../untils/common';
+import {stringFormat} from '../../untils/common';
 import fs from 'fs';
 import path from 'path';
 
 const bookingAPIRequestBody = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '..', 'test-data', 'post_dynamic_requests_body.json'), 'utf8')
+  fs.readFileSync(path.resolve(__dirname, '../..', 'test-data', 'post_dynamic_requests_body.json'), 'utf8')
 );
 
 //Wright test

@@ -1,6 +1,7 @@
 //Load playwright test module
 import { test, expect } from '@playwright/test';
-const bookingAPIRequestBody = require('../test-data/post_requests_body.json');
+const bookingAPIRequestBody = require('../../test-data/post_requests_body.json');
+
 
 //Wright test
 test('Create POST API Request using static JSON file', async ({ request }) => {
