@@ -9,7 +9,7 @@ const bookingAPIRequestBody = JSON.parse(
 );
 
 //Wright test
-test('Create POST API Request using dynamic JSON file', async ({ request }) => {
+test('Query parameters in playwright', async ({ request }) => {
   
   const dynamicRequestBody = stringFormat(JSON.stringify(bookingAPIRequestBody), "Testers_dynamic_file","Stevie_dynamic_file","strong");
 
@@ -23,6 +23,7 @@ test('Create POST API Request using dynamic JSON file', async ({ request }) => {
   expect(postApiResponse.status()).toBe(200);
 
   const postApiResponseBody = await postApiResponse.json();
+  const bId = await postApiResponseBody.bookingid;
   console.log(postApiResponseBody);
 
   //Validate response body
@@ -34,6 +35,20 @@ test('Create POST API Request using dynamic JSON file', async ({ request }) => {
   expect(postApiResponseBody.booking.bookingdates).toHaveProperty('checkin', "2019-02-15");
   expect(postApiResponseBody.booking.bookingdates).toHaveProperty('checkout', "2020-01-01");
 
+  console.log('====================');
+
+  //GET call to verify data
+  const getApiResponse = await request.get(`/booking/`, {
+    params: {
+      firstname: "Testers_dynamic_file",
+      lastname: "Stevie_dynamic_file"
+    }
+  });
+  console.log(await getApiResponse.json());
+
+  //Validate GET status code
+  expect(getApiResponse.ok()).toBeTruthy();
+  expect(getApiResponse.status()).toBe(200);  
 
 });
 
