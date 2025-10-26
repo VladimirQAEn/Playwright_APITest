@@ -1,0 +1,33 @@
+===POST API====
+{
+  bookingid: 3783,
+  booking: {
+    firstname: 'Testers_dynamic_file',
+    lastname: 'Stevie_dynamic_file',
+    totalprice: 235,
+    depositpaid: false,
+    bookingdates: { checkin: '2019-02-15', checkout: '2020-01-01' },
+    additionalneeds: 'strong'
+  }
+}
+===GET API====
+{
+  firstname: 'Testers_dynamic_file',
+  lastname: 'Stevie_dynamic_file',
+  totalprice: 235,
+  depositpaid: false,
+  bookingdates: { checkin: '2019-02-15', checkout: '2020-01-01' },
+  additionalneeds: 'strong'
+}
+Token: 9032bf1b1e3be36
+===PATCH API====
+{
+  firstname: 'Part_Specflow',
+  lastname: 'Part_Selenium',
+  totalprice: 235,
+  depositpaid: false,
+  bookingdates: { checkin: '2019-02-15', checkout: '2020-01-01' },
+  additionalneeds: 'strong'
+}
+===DELETE API====
+===GET API after delete====

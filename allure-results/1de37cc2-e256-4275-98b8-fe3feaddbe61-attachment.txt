@@ -1,0 +1,11 @@
+{
+  bookingid: 3795,
+  booking: {
+    firstname: 'Testers',
+    lastname: 'Stevie',
+    totalprice: 235,
+    depositpaid: false,
+    bookingdates: { checkin: '2019-02-15', checkout: '2020-01-01' },
+    additionalneeds: 'super bowls'
+  }
+}

@@ -1,0 +1,11 @@
+{
+  bookingid: 3807,
+  booking: {
+    firstname: 'Modesto',
+    lastname: 'Boehm',
+    totalprice: 367,
+    depositpaid: false,
+    bookingdates: { checkin: '2025-10-26', checkout: '2025-11-02' },
+    additionalneeds: 'super bowls'
+  }
+}
