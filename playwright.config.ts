@@ -1,5 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 
+//додатковий фреймворк odottaa для розширення перевірок API + (terminal--> npm i -D odottaa)
+import {expect} from '@playwright/test';
+import playwrightApiMatchers from 'odottaa';
+expect.extend(playwrightApiMatchers);
+
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv

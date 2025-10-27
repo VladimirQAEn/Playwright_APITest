@@ -20,7 +20,9 @@
     "@playwright/test": "^1.56.1",
     "@types/luxon": "^3.7.1",
     "@types/node": "^24.9.0",
-    "allure-playwright": "^3.4.1"
+    "allure-playwright": "^3.4.1",
+    "joi": "^18.0.1", 
+    "odottaa": "^1.1.19"
   },
   "dependencies": {
     "luxon": "^3.7.2"
