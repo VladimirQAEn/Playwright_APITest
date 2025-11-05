@@ -1,0 +1,11 @@
+{
+  bookingid: 2993,
+  booking: {
+    firstname: 'Myriam',
+    lastname: 'Fadel',
+    totalprice: 604,
+    depositpaid: false,
+    bookingdates: { checkin: '2025-11-05', checkout: '2025-11-12' },
+    additionalneeds: 'super bowls'
+  }
+}
