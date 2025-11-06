@@ -27,6 +27,7 @@ test('Create DELETE API Request in playwright', async ({ request }) => {
     //Validate status code
     expect(postApiResponse.ok()).toBeTruthy();
     expect(postApiResponse.status()).toBe(200);
+    expect(postApiResponse.headers()['content-type']).toBe('application/json; charset=utf-8');
 
     const postApiResponseBody = await postApiResponse.json();
     const bId = await postApiResponseBody.bookingid;

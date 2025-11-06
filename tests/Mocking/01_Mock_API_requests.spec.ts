@@ -1,7 +1,7 @@
 import { test, expect, devices } from '@playwright/test';
 test.use({ ...devices['Desktop Chrome'], headless: false });
 
-
+//Mock API Requests
 test('Mock API Requests in playwright', async ({ page }) => {
 
 await page.route('*/**/api/v1/fruits', async route => {
